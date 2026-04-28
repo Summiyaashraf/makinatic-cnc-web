@@ -1,5 +1,3 @@
-import { Label } from "@sanity/ui";
-
 export const machinesData = [
   {
     id: "MK-2160S",
