@@ -360,7 +360,7 @@ export const machinesData = [
     name: "CNC Fiber Laser Machine 12KW",
     industries: ["Metal Factory", "Aluminum & Glass Fabrication Industry"],
     mainImage: "/12w.jpeg", 
-    shortDesc: "Large Working Area 2060 | 6000W",
+    shortDesc: "Large Working Area 2060 | 12000W",
     mainParts: [
       { sr: "1", part: "Model", spec: "MK-FLST-2060" },
       { sr: "2", part: "Maximum processing range", spec: "2060" },
@@ -414,7 +414,7 @@ export const machinesData = [
     name: "CNC Fiber Laser Machine 20KW",
     industries: ["Metal Factory", "Singe Industry"],
     mainImage: "/12w.jpeg",
-    shortDesc: "3-in-1 Welding Solution | 3000W Fiber Source",
+    shortDesc: "3-in-1 Welding Solution | 20,000W Fiber Source",
     mainParts: [
       { sr: "1", part: "Model", spec: "MK-FLST-3060" },
       { sr: "2", part: "Maximum processing range", spec: "3060" },
@@ -507,6 +507,100 @@ export const machinesData = [
       { title: "Stainless steel", img: "/b-2.png" },
       { title: "Aluminum", img: "/b-3.png" },
       { title: "Brass", img: "/b-4.png" }
+    ]
+  },
+  {
+    id: "PANEL-SAW-3200",
+    name: "PANEL SAW 3200 (European Standard)",
+    industries: ["Wood Factory", "Furniture Industry", "Interior Design"],
+    mainImage: "/panel-saw.png", 
+    shortDesc: "European Standard | High Precision | Manual Lifting",
+    mainParts: [
+      { sr: "1", part: "Bed structure", spec: "Heavy Internal Markov structure" },
+      { sr: "2", part: "Saw blade adjustable angle", spec: "45 degrees adjustable" },
+      { sr: "3", part: "Motor", spec: "5.5KW + 1.1KW Motor" },
+      { sr: "4", part: "Lift type", spec: "Manual adjustment" },
+      { sr: "5", part: "Saw Blade set", spec: "German craft HERO saw blade" },
+      { sr: "6", part: "Work surface and auxiliary arm", spec: "3200mm push table | 390mm ultra-wide sliding table |  190 large scales |  Enlarged and widened auxiliary workbench |  Aluminum alloy core puller" },
+      { sr: "7", part: "Sliding Structure", spec: "With step-by-step lock structure " },
+      { sr: "8", part: "Lubricating", spec: "With oiler" },
+      { sr: "9", part: "Size", spec: "3400*1100*1200 mm" },
+      { sr: "10", part: "Weight", spec: "900 KG" },
+      { sr: "11", part: "Voltage", spec: "380V/220V/3P/60hz Supports 380V and 220V " }
+    ],
+    parameters: [
+      { label: "1. Saw blade angle", value: "90° to 45° adjustable" },
+      { label: "2. Push table length", value: "3200mm" },
+      { label: "3. Sliding table width", value: "390mm" },
+      { label: "4. Voltage", value: "380V/220V/3P/60Hz" },
+      { label: "5. Size", value: "3400 * 1100 * 1200 mm" },
+      { label: "6. Weight", value: "900 KG" },
+      { label: "7. Main Motor Power", value: "5.5 KW" },
+      { label: "8. Scoring Motor Power", value: "1.1 KW" }
+    ],
+    spareParts: [
+      { title: "Thickened sliding platform", img: "/saw-1.png" },
+      { title: "Motor unit", img: "/saw-2.png" },
+      { title: "Auxiliary ruler", img: "/saw-3.png" },
+      { title: "Control panel", img: "/saw-4.png" },
+      { title: "Manual rocker device", img: "/saw-5.png" },
+      { title: "Extensible by ruler", img: "/saw-6.png" },
+      { title: "Widened auxiliary workbench", img: "/saw-7.png" },
+      { title: "Upgrade with dustproof screw", img: "/saw-8.png" },
+      { title: "Metal fine-tuning round roller", img: "/saw-9.png" },
+      { title: "Fine-tuning aids", img: "/saw-10.png" },
+      { title: "Double side sliding roller", img: "/saw-11.png" },
+      { title: "Anti-collision buffer device", img: "/saw-12.png" }
+    ]
+  },
+  {
+    id: "EDGE-BANDING-AUTO",
+    name: "Fully Automatic Edge Banding Machine",
+    industries: ["Wood Factory", "Furniture Manufacturing"],
+    mainImage: "/edge-bander.png",
+    shortDesc: "Multi-functional | High Speed 23m/min | Intelligent Control",
+    mainParts: [
+      { sr: "1", part: "Control System", spec: "WECON CNC System / PLC Board" },
+      { sr: "2", part: "Main Functions", spec: "Pre-milling, Gluing, End Cutting, Rough & Fine Trimming" },
+      { sr: "3", part: "Additional Functions", spec: "Corner Trimming, Scraping, Cleaning & Polishing" },
+      { sr: "4", part: "Motors", spec: "Full power lifting motor & Dongyu transmission motor" },
+      { sr: "5", part: "Inverter", spec: "CHUNIO Inverter" },
+      { sr: "6", part: "Electronics", spec: "Chint Electric components" },
+      { sr: "7", part: "Pneumatic Parts", spec: "Solenoid valve & Water separator" },
+      { sr: "8", part: "Safety", spec: "Multiple Emergency stop switches" }
+    ],
+    parameters: [
+      { label: "1. Total machine power", value: "20kw" },
+      { label: "2. Transfer speed", value: "15-23m/min" },
+      { label: "3. Sheet thickness", value: "10-60mm" },
+      { label: "4. Edge band thickness", value: "0.4-3mm" },
+      { label: "5. Working pressure", value: "0.8Mpa" },
+      { label: "6. Weight", value: "2300kg" },
+      { label: "7. Dimensions (length*width*height mm)", value: "8200 * 750 * 1600mm" },
+      { label: "8. Voltage", value: "380V/3P/50HZ (Customizable)" },
+      { label: "4. Minimum sheet size", value: "300(L)*60(W)mm 150(L)*150(W)mm" },
+      { label: "5. Sheet length", value: "≥150mm" },
+      { label: "6. Sheet width", value: "≥60mm" }
+    ],
+    spareParts: [
+      { title: "WECON CNC system", img: "/eb-1.png" },
+      { title: "PLC board", img: "/eb-2.png" },
+      { title: "Gas tank", img: "/eb-3.png" },
+      { title: "Inverter", img: "/eb-4.png" },
+      { title: "Transformer", img: "/eb-5.png" },
+      { title: "Chint Electric", img: "/eb-6.png" },
+      { title: "Solenoid valve", img: "/eb-7.png" },
+      { title: "Encoder", img: "/eb-8.png" },
+      { title: "Conveyor emergency stop switch", img: "/eb-9.png" },
+      { title: "Full power lifting motor", img: "/eb-10.png" },
+      { title: "Conveyor motor", img: "/eb-11.png" },
+      { title: "Blowpipe Cleaning", img: "/eb-12.png" },
+      { title: "Mechanical value table", img: "/eb-13.png" },
+      { title: "Mechanical switch", img: "/eb-14.png" },
+      { title: "Ruler adjustment knob", img: "/eb-15.png" },
+      { title: "Edge banding tray", img: "/eb-16.png" },
+      { title: "Feeding auxiliary wheel", img: "/eb-17.png" },
+      { title: "Water separator", img: "/eb-18.png" }
     ]
   }
 ];
