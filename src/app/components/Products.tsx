@@ -1,12 +1,26 @@
 "use client";
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { X, MessageCircle, ArrowRight } from 'lucide-react';
 import { machinesData } from '../data/machines';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 const ProductSection = ({ isFullPage = false }: { isFullPage?: boolean }) => {
   const [selectedMachine, setSelectedMachine] = useState<any>(null);
+  const searchParams = useSearchParams();
+  
+  // URL se industry ka naam pakadne ke liye logic
+  const industryFromUrl = searchParams.get('industry');
   const [activeTab, setActiveTab] = useState('All');
+
+  // Jab bhi URL change ho (Navbar click se), tab ko update karein
+  useEffect(() => {
+    if (industryFromUrl) {
+      setActiveTab(industryFromUrl);
+    } else {
+      setActiveTab('All');
+    }
+  }, [industryFromUrl]);
 
   const industries = [
     { id: 'All', label: 'All Machines' },
@@ -15,13 +29,14 @@ const ProductSection = ({ isFullPage = false }: { isFullPage?: boolean }) => {
     { id: 'Metal Factory', label: 'Metal Factory' },
     { id: 'Aluminum & Glass Fabrication Industry', label: 'Aluminum & Glass Fabrication Industry' }
   ];
+
   // Logic to filter machines based on active tab
   const filteredMachines = useMemo(() => {
     let result = machinesData;
     if (activeTab !== 'All') {
       result = machinesData.filter(m => m.industries?.includes(activeTab));
     }
-    // Agar home page pe ho to sirf 4 machines dikhao, warna filter ke mutabiq saari
+    // Agar home page pe ho to sirf 4 machines dikhao, warna sari
     return isFullPage ? result : result.slice(0, 4);
   }, [activeTab, isFullPage]);
 
@@ -95,14 +110,14 @@ const ProductSection = ({ isFullPage = false }: { isFullPage?: boolean }) => {
       {!isFullPage && (
         <div className="mt-12 md:mt-16 text-center px-4">
           <Link href="/products">
-            <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-[#061a80] px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-blue-50 transition-all shadow-xl text-sm">
+            <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-[#061a80] px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-blue-50 transition-all shadow-xl text-sm cursor-pointer">
               Explore All Solutions <ArrowRight size={20} />
-            </button>
+            </div>
           </Link>
         </div>
       )}
 
-      {/* Modal - Unchanged but included for complete copy-paste */}
+      {/* Modal Section */}
       {selectedMachine && (
         <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-4 bg-black/80 backdrop-blur-md">
           <div className="bg-white rounded-t-[2rem] md:rounded-[2rem] max-w-5xl w-full max-h-[90vh] md:max-h-[95vh] overflow-y-auto relative p-6 md:p-10">
