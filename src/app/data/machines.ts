@@ -626,7 +626,7 @@ export const machinesData = [
       { label: "8. Machine Operating Temp", value: "0-45°C" },
       { label: "9. Electricity Demand", value: "380V" },
       { label: "10. Cooling Method", value: "Water Chiller Hanli / S&A" },
-      { label: "12. Continuous Operating Time", value: "24 hours" }
+      { label: "11. Continuous Operating Time", value: "24 hours" }
     ],
     spareParts: [
       { title: "Multi-functions Laser Welding Machine", img: "/welding-machine.png" },
