@@ -42,7 +42,6 @@ export const machinesData = [
       { label: "19. Net Weight", value: "3350KG" },
       { label: "20. Packing Size", value: "6550mm * 2290mm * 1900mm" }
     ],
-    // PDF Page 4 par jo images hain
     spareParts: [
       { title: "6.0KW HSD Air Cooling Spindle", img: "/s1.png" },
       { title: "A11 DSP Controller", img: "/s2.png" },
