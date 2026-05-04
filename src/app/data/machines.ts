@@ -602,5 +602,35 @@ export const machinesData = [
       { title: "Feeding auxiliary wheel", img: "/eb-17.png" },
       { title: "Water separator", img: "/eb-18.png" }
     ]
+  },
+  {
+    id: "QH-3000-WELD-NEW",
+    name: "Multi-functions Laser Welding 3000W",
+    industries: ["Metal Fabrication", "Industrial Manufacturing", "Maintenance Workshops"],
+    mainImage: "/welding-machine.png", 
+    shortDesc: "3-in-1 Solution | 3000W Fiber Source | Continuous 24h Operation",
+    mainParts: [
+      { sr: "1", part: "Fiber Laser Source", spec: "1 Set - MAX Brand" },
+      { sr: "2", part: "Controller and Welding Gun", spec: "1 Set - Raytools/SUP/Qilin" },
+      { sr: "3", part: "Water Chiller", spec: "1 Set - S&A / Hanli" },
+      { sr: "4", part: "Wire Feeder", spec: "1 Set - Raytools/SUP/Qilin" }
+    ],
+    parameters: [
+      { label: "1. Laser Source Type", value: "Fiber Source" },
+      { label: "2. Laser Out Power", value: "3000 W" },
+      { label: "3. Laser Wavelength", value: "1070nm" },
+      { label: "4. Laser Source", value: "MAX" },
+      { label: "5. Focal Spot Diameter", value: "0.1-3mm" },
+      { label: "6. Laser Frequency", value: "60 Hz" },
+      { label: "7. Repeatability", value: "±0.01mm" },
+      { label: "8. Machine Operating Temp", value: "0-45°C" },
+      { label: "9. Electricity Demand", value: "380V" },
+      { label: "10. Cooling Method", value: "Water Chiller Hanli / S&A" },
+      { label: "12. Continuous Operating Time", value: "24 hours" }
+    ],
+    spareParts: [
+      { title: "Multi-functions Laser Welding Machine", img: "/welding-machine.png" },
+      
+    ]
   }
 ];
