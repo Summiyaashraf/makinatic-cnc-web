@@ -22,12 +22,12 @@ const CompanyProfilePage = () => {
     {
       icon: <ShieldCheck className="text-[#0056b3]" size={24} />,
       title: language === 'en' ? 'Trusted Quality' : 'جودة موثوقة',
-      desc: language === 'en' ? 'Specializing in advanced CNC machines designed for modern manufacturing.' : 'متخصصون في آلات سي إن سي المتقدمة المصممة للتصنيع الحديث.'
+      desc: language === 'en' ? 'Specializing in advanced CNC machines designed for modern manufacturing.' : 'متخصصون في آلات سي إن سي (CNC) المتقدمة المصممة للتصنيع الحديث.'
     },
     {
       icon: <Settings2 className="text-[#0056b3]" size={24} />,
       title: language === 'en' ? 'Precision Engineering' : 'هندسة دقيقة',
-      desc: language === 'en' ? 'High-precision tools to help businesses improve productivity and accuracy.' : 'أدوات عالية الدقة لمساعدة الشركات على تحسين الإنتاجية والدقة.'
+      desc: language === 'en' ? 'High-precision tools to help businesses improve productivity and accuracy.' : 'أدوات عالية الدقة لمساعدة الشركات على تحسين الإنتاجية والكفاءة.'
     }
   ];
 
@@ -36,7 +36,7 @@ const CompanyProfilePage = () => {
       title: language === 'en' ? 'Our Mission' : 'رسالتنا',
       desc: language === 'en' 
         ? 'To provide high-quality industrial solutions through precision CNC and laser technology, ensuring customer success.' 
-        : 'تقديم حلول صناعية عالية الجودة من خلال تقنية سي إن سي والليزر الدقيقة، مما يضمن نجاح العملاء.',
+        : 'تقديم حلول صناعية عالية الجودة من خلال تقنيات "سي إن سي" والليزر الدقيقة، بما يضمن نجاح وتطور عملائنا.',
       icon: <Target className="text-white" size={30} />,
       bg: 'bg-blue-600'
     },
@@ -44,7 +44,7 @@ const CompanyProfilePage = () => {
       title: language === 'en' ? 'Our Vision' : 'رؤيتنا',
       desc: language === 'en' 
         ? 'To be the most reliable partner in the Middle East for advanced industrial machinery and technical support.' 
-        : 'أن نكون الشريك الأكثر موثوقية في الشرق الأوسط للآلات الصناعية المتقدمة والدعم الفني.',
+        : 'أن نكون الشريك الأكثر موثوقية في الشرق الأوسط في مجال الآلات الصناعية المتقدمة والدعم الفني المتخصص.',
       icon: <Rocket className="text-white" size={30} />,
       bg: 'bg-[#002B5B]'
     }
@@ -54,7 +54,7 @@ const CompanyProfilePage = () => {
     <>
       <Navbar /> 
       <main className="pt-1"> 
-        {/* Section 1: About - Fixed Mobile Alignment & Padding */}
+        {/* Section 1: About */}
         <section className={`pt-16 md:pt-24 pb-12 md:pb-20 bg-blue-100 overflow-hidden ${isAr ? 'text-right' : 'text-left'}`}> 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${isAr ? 'lg:flex-row-reverse' : ''}`}>
@@ -65,7 +65,7 @@ const CompanyProfilePage = () => {
                 <p className="text-base md:text-lg text-gray-700 mb-10 leading-relaxed font-medium">
                   {language === 'en' 
                     ? 'Makinati (Lamsa Al Qusoor Decor) is a leading provider of CNC machines, laser systems, and high-tech marking solutions in Saudi Arabia. We deliver innovation that powers modern industries.' 
-                    : 'ماكيناتي (لمسة القصور للديكور) هي مزود رائد لآلات سي إن سي وأنظمة الليزر وحلول الوسم عالية التقنية في المملكة العربية السعودية.'}
+                    : 'تعد "ماكيناتي" (مؤسسة لمسة القصور للديكور) مزوداً رائداً لآلات "سي إن سي" وأنظمة الليزر وحلول الوسم عالية التقنية في المملكة العربية السعودية، حيث نقدم ابتكارات تدعم الصناعات الحديثة.'}
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
@@ -81,7 +81,6 @@ const CompanyProfilePage = () => {
                 </div>
               </div>
 
-              {/* Image Fix: Mobile height and responsive rounding */}
               <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0">
                 <div className="relative z-10 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-blue-700">
                   <img src="/About.png" alt="Industrial Facility" className="w-full h-[300px] md:h-[500px] object-cover" />
@@ -92,7 +91,7 @@ const CompanyProfilePage = () => {
           </div>
         </section>
 
-        {/* Section 2: Vision & Mission - Responsive Padding */}
+        {/* Section 2: Vision & Mission */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
@@ -109,16 +108,18 @@ const CompanyProfilePage = () => {
           </div>
         </section>
 
-        {/* Section 3: Philosophy - Grid Fix for small screens */}
+        {/* Section 3: Philosophy */}
         <section className="py-16 md:py-20 bg-blue-700">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-black text-[#f8f9fa] mb-12 md:mb-16 uppercase italic">Our Professional Philosophy</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-[#f8f9fa] mb-12 md:mb-16 uppercase italic">
+              {isAr ? 'فلسفتنا المهنية' : 'Our Professional Philosophy'}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {[
-                { title: 'Innovation', icon: <Lightbulb className="text-blue-600" size={32} /> },
-                { title: 'Quality Control', icon: <CheckCircle2 className="text-blue-600" size={32} /> },
-                { title: 'Partnership', icon: <Users className="text-blue-600" size={32} /> },
-                { title: 'Excellence', icon: <Trophy className="text-blue-600" size={32} /> },
+                { title: isAr ? 'الابتكار' : 'Innovation', icon: <Lightbulb className="text-blue-600" size={32} /> },
+                { title: isAr ? 'ضبط الجودة' : 'Quality Control', icon: <CheckCircle2 className="text-blue-600" size={32} /> },
+                { title: isAr ? 'الشراكة' : 'Partnership', icon: <Users className="text-blue-600" size={32} /> },
+                { title: isAr ? 'التميز' : 'Excellence', icon: <Trophy className="text-blue-600" size={32} /> },
               ].map((item, i) => (
                 <div key={i} className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-blue-950 flex flex-col items-center">
                   <div className="mb-4">{item.icon}</div>
@@ -132,11 +133,13 @@ const CompanyProfilePage = () => {
         {/* Section 4: Extra Statement */}
         <section className="py-12 md:py-16 bg-[#002B5B] text-center text-white px-4">
           <div className="max-w-4xl mx-auto">
-             <h3 className="text-xl md:text-2xl font-bold mb-4 italic">Empowering Local Industry with International Standards</h3>
+             <h3 className="text-xl md:text-2xl font-bold mb-4 italic">
+               {isAr ? 'تمكين الصناعة المحلية بمعايير عالمية' : 'Empowering Local Industry with International Standards'}
+             </h3>
              <p className="text-sm md:text-base opacity-80 leading-relaxed">
-               {language === 'en' 
-                 ? 'We pride ourselves on being more than just a supplier; we are your partner in growth.' 
-                 : 'نحن نفخر بكوننا أكثر من مجرد مورد؛ نحن شريكك في النمو.'}
+                {language === 'en' 
+                  ? 'We pride ourselves on being more than just a supplier; we are your partner in growth.' 
+                  : 'نحن نفخر بكوننا أكثر من مجرد مورد؛ نحن شريككم الاستراتيجي في النمو والنجاح.'}
              </p>
           </div>
         </section>
