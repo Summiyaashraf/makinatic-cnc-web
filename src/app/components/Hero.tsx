@@ -16,11 +16,11 @@ const Hero = () => {
       btn2: "Contact Us"
     },
     ar: {
-      title1: "الدقة، الموثوقية،",
-      title2: "والابتكار",
-      desc: "ماكيناتي سي إن سي اسم موثوق في حلول التصنيع باستخدام الحاسب الآلي. نحن ملتزمون بتقديم آلات تعمل باستمرار، وتقلل من وقت الإنتاج، وتحقق أقصى قدر من رضا العملاء.",
-      btn1: "استكشف الآلات",
-      btn2: "اتصل بنا"
+      title1: "دقة، موثوقية،",
+      title2: "وابتكار",
+      desc: "ماكيناتي سي إن سي اسم موثوق في حلول التصنيع الآلي. نحن ملتزمون بتقديم معدات تعمل بكفاءة عالية، وتقلل من وقت الإنتاج، وتحقق أقصى درجات رضا العملاء.",
+      btn1: "تصفح المعدات",
+      btn2: "تواصل معنا"
     }
   };
 
@@ -57,39 +57,35 @@ const Hero = () => {
         </div>
 
         {/* Image Side - Final Responsive Fix */}
-<div className="w-full lg:w-1/2 flex items-center justify-center relative order-1 lg:order-2 mt-6 lg:mt-0">
-  {/* Background Glow - Mobile par size chota kiya hai */}
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-full md:h-full bg-blue-400/10 rounded-full blur-[60px] md:blur-[120px]"></div>
-  
-  <div className="relative z-10 w-full flex justify-center items-center px-2"
-       style={{
-         // Mobile (default) par mask 2% hai, Desktop (lg) par 15% ho jaye ga
-         maskImage: 'linear-gradient(to right, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent), linear-gradient(to bottom, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent)',
-         WebkitMaskImage: 'linear-gradient(to right, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent), linear-gradient(to bottom, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent)',
-         maskComposite: 'intersect',
-         WebkitMaskComposite: 'source-in',
-       }}>
-    
-    {/* Responsive Variable for Mask */}
-    <style jsx>{`
-      div { --m-size: 2%; }
-      @media (min-width: 1024px) {
-        div { --m-size: 15%; }
-      }
-    `}</style>
+        <div className="w-full lg:w-1/2 flex items-center justify-center relative order-1 lg:order-2 mt-6 lg:mt-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-full md:h-full bg-blue-400/10 rounded-full blur-[60px] md:blur-[120px]"></div>
+          
+          <div className="relative z-10 w-full flex justify-center items-center px-2"
+               style={{
+                 maskImage: 'linear-gradient(to right, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent), linear-gradient(to bottom, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent)',
+                 WebkitMaskImage: 'linear-gradient(to right, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent), linear-gradient(to bottom, transparent, black var(--m-size, 2%), black calc(100% - var(--m-size, 2%)), transparent)',
+                 maskComposite: 'intersect',
+                 WebkitMaskComposite: 'source-in',
+               }}>
+            
+            <style jsx>{`
+              div { --m-size: 2%; }
+              @media (min-width: 1024px) {
+                div { --m-size: 15%; }
+              }
+            `}</style>
 
-    <Image
-      src="/hero-machine.png"
-      alt="Makinati CNC Router"
-      width={700}
-      height={600}
-      priority
-      // Mobile par aspect-ratio barkarar rakhne ke liye 'h-auto' aur 'object-contain'
-      className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-full h-auto object-contain drop-shadow-2xl transition-all duration-300"
-    />
-  </div>
-</div>
-  </div>
+            <Image
+              src="/hero-machine.png"
+              alt="Makinati CNC Router"
+              width={700}
+              height={600}
+              priority
+              className="w-full max-w-[280px] sm:max-w-[400px] md:max-w-full h-auto object-contain drop-shadow-2xl transition-all duration-300"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
