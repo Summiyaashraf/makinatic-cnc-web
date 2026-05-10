@@ -1,11 +1,19 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import Script from 'next/script';
 
 const ReviewSection = () => {
-  const { language } = useLanguage();
+  const context = useLanguage();
+  const language = context?.language || 'ar'; 
   const isAr = language === 'ar';
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -26,7 +34,7 @@ const ReviewSection = () => {
           </div>
 
           {/* Google Reviews Widget Container */}
-          <div className="bg-blue-500 p-4 md:p-10 rounded-[2.5rem] shadow-2xl border-b-8 border-blue-950 min-h-[400px]">
+          <div className="bg-white p-4 md:p-10 rounded-[2.5rem] shadow-2xl border-b-8 border-blue-700 min-h-[400px]">
             {/* Live Widget ID */}
             <div className="elfsight-app-22006d02-55aa-4589-be02-32c9d80b191a" data-elfsight-app-lazy>
                 <p className="text-center text-gray-400 mt-20 italic">Loading Verified Reviews...</p>
