@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'; // Dynamic import ko use karein
+import dynamic from 'next/dynamic'; 
 import Navbar from "@/src/app/components/Navbar";
 import Hero from "@/src/app/components/Hero";
 import ProductSection from "@/src/app/components/Products";
@@ -7,7 +7,7 @@ import Footer from "@/src/app/components/Footer";
 import Features from "@/src/app/components/Features";
 import ContactPage from "@/src/app/components/Contact";
 
-const ReviewsPage = dynamic(() => import("./components/Review"), { 
+const ReviewsPage = dynamic(() => import("@/src/app/components/Review"), { 
   ssr: false,
   loading: () => <div className="h-20 bg-gray-50 flex items-center justify-center italic text-gray-400">Loading Reviews...</div>
 });
