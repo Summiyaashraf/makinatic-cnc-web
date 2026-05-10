@@ -11,12 +11,16 @@ const AboutSection = () => {
     {
       icon: <ShieldCheck className="text-[#0056b3]" size={24} />,
       title: language === 'en' ? 'Trusted Quality' : 'جودة موثوقة',
-      desc: language === 'en' ? 'Specializing in advanced CNC machines designed for modern manufacturing.' : 'متخصصون في آلات سي إن سي المتقدمة المصممة للتصنيع الحديث.' 
+      desc: language === 'en' 
+        ? 'Specializing in advanced CNC machines designed for modern manufacturing.' 
+        : 'متخصصون في آلات سي إن سي (CNC) المتقدمة المصممة للتصنيع الحديث.' 
     },
     {
       icon: <Settings2 className="text-[#0056b3]" size={24} />,
       title: language === 'en' ? 'Precision Engineering' : 'هندسة دقيقة',
-      desc: language === 'en' ? 'High-precision tools to help businesses improve productivity and accuracy.' : 'أدوات عالية الدقة لمساعدة الشركات على تحسين الإنتاجية والدقة.' 
+      desc: language === 'en' 
+        ? 'High-precision tools to help businesses improve productivity and accuracy.' 
+        : 'أدوات عالية الدقة لمساعدة الشركات على تحسين الإنتاجية والكفاءة.' 
     }
   ];
 
@@ -35,7 +39,7 @@ const AboutSection = () => {
             <p className="text-base md:text-lg text-gray-600 mb-10 leading-relaxed">
               {language === 'en' 
                 ? 'Makinati CNC is a trusted name in CNC machining solutions in Saudi Arabia, delivering precision, reliability, and innovation. We specialize in machines that meet the needs of modern industry.' 
-                : 'ماكيناتي سي إن سي اسم موثوق في حلول التصنيع باستخدام الحاسب الآلي في المملكة العربية السعودية، حيث تقدم الدقة والموثوقية والابتكار.'}
+                : 'تعد "ماكيناتي سي إن سي" اسماً موثوقاً في حلول التصنيع الرقمي بالمملكة العربية السعودية، حيث نقدم الدقة والموثوقية والابتكار. نحن متخصصون في الآلات التي تلبي احتياجات الصناعة الحديثة.'}
             </p>
             
             {/* Features Grid - Mobile par icons align kar diye hain */}
