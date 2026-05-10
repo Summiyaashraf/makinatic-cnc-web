@@ -15,12 +15,11 @@ const Navbar = () => {
     setMounted(true);
   }, []);
 
-  // Wahi categories jo aapke ProductSection mein hain
   const industries = [
-    { id: 'Singe Industry', label: 'Singe Industry' },
-    { id: 'Wood Factory', label: 'Wood Factory' },
-    { id: 'Metal Factory', label: 'Metal Factory' },
-    { id: 'Aluminum & Glass Fabrication Industry', label: 'Aluminum & Glass Fabrication Industry' }
+    { id: 'Singe Industry', label: language === 'ar' ? 'صناعة الإشارات' : 'Singe Industry' },
+    { id: 'Wood Factory', label: language === 'ar' ? 'مصنع الأخشاب' : 'Wood Factory' },
+    { id: 'Metal Factory', label: language === 'ar' ? 'مصنع المعادن' : 'Metal Factory' },
+    { id: 'Aluminum & Glass Fabrication Industry', label: language === 'ar' ? 'صناعة الألمنيوم والزجاج' : 'Aluminum & Glass Fabrication Industry' }
   ];
 
   if (!mounted) return <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 h-20 shadow-sm" />;
@@ -63,14 +62,13 @@ const Navbar = () => {
                 <div className="absolute top-[80%] left-0 w-80 bg-white border border-gray-100 shadow-xl rounded-xl py-2 animate-in fade-in zoom-in duration-200 z-[60]">
                   <Link 
                     href="/products" 
-                    className="block px-4 py-3 text-sm font-black text-[#0056b3] border-b border-gray-50 hover:bg-blue-50 uppercase"
+                    className="block px-4 py-3 text-sm font-black text-[#0056b3] border-b border-gray-0 hover:bg-blue-50 uppercase"
                   >
-                    All Machines
+                    {language === 'ar' ? 'جميع الآلات' : 'All Machines'}
                   </Link>
                   {industries.map((ind) => (
                     <Link
                       key={ind.id}
-                      // Hum 'industry' name ko URL mein bhej rahe hain
                       href={`/products?industry=${encodeURIComponent(ind.id)}`}
                       className="block px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#0056b3] transition-colors font-medium"
                     >
@@ -97,7 +95,9 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <button onClick={toggleLanguage} className="p-2 text-[#0056b3]"><Globe size={22} /></button>
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-gray-600"><Menu size={28} /></button>
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-gray-600">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ const Navbar = () => {
               {isProductOpen && (
                 <div className="bg-gray-50 rounded-xl mx-2 py-2">
                   <Link href="/products" className="block px-8 py-2 text-sm font-bold text-[#0056b3]" onClick={() => setIsOpen(false)}>
-                    All Machines
+                    {language === 'ar' ? 'جميع الآلات' : 'All Machines'}
                   </Link>
                   {industries.map((ind) => (
                     <Link
