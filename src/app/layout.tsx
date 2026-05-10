@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Poore app ko provider mein wrap kar diya */}
+      
         <LanguageProvider>
           {children}
           <FloatingWhatsApp />
