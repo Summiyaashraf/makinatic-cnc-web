@@ -36,26 +36,26 @@ const Features = () => {
     },
     ar: {
       heading: "لماذا تختار ماكيناتي؟",
-      subheading: "نحن نجمع بين الابتكار والموثوقية لتقديم أفضل حلول التصنيع باستخدام الحاسب الآلي في السوق.",
+      subheading: "نجمع بين الابتكار والموثوقية لنقدم لكم أفضل حلول التصنيع الرقمي (CNC) في السوق السعودي.",
       strengths: [
         {
-          title: "دقة عالية",
-          desc: "آلات CNC موثوقة توفر دقة بنسبة 100٪ للمهام الصناعية المعقدة.",
+          title: "دقة فائقة",
+          desc: "آلات سي إن سي موثوقة تضمن دقة متناهية لتنفيذ أعقد المهام الصناعية.",
           icon: <Target className="w-8 h-8 text-blue-600" />,
         },
         {
-          title: "تكنولوجيا حديثة",
-          desc: "مجهزة بأحدث أنظمة التحكم ومكونات عالية الجودة.",
+          title: "تقنيات متطورة",
+          desc: "مجهزة بأحدث أنظمة التحكم الرقمي ومكونات صناعية ذات جودة عالمية.",
           icon: <Cpu className="w-8 h-8 text-blue-600" />,
         },
         {
           title: "متانة صناعية",
-          desc: "مصممة بهياكل فولاذية قوية للعمليات المستمرة على مدار الساعة.",
+          desc: "مصممة بهياكل فولاذية صلبة مخصصة للعمل الشاق والتشغيل المستمر ٢٤/٧.",
           icon: <ShieldCheck className="w-8 h-8 text-blue-600" />,
         },
         {
-          title: "إنتاج أسرع",
-          desc: "مصممة لتقليل وقت الإنتاج وزيادة كفاءة عملك.",
+          title: "سرعة الإنتاج",
+          desc: "صُممت لتقليل وقت التصنيع ورفع كفاءة عملياتك الإنتاجية إلى أقصى حد.",
           icon: <Zap className="w-8 h-8 text-blue-600" />,
         },
       ]
@@ -74,7 +74,7 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Responsive Grid: Mobile par 1, Tablet par 2, Desktop par 4 */}
+        {/* Responsive Grid: Mobile: 1, Tablet: 2, Desktop: 4 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {t.strengths.map((item, index) => (
             <div 
