@@ -44,10 +44,10 @@ const ReviewSection = () => {
           {/* Verification Badge / Trust Info */}
           <div className={`mt-12 flex flex-col md:flex-row items-center justify-center gap-6 opacity-80 ${isAr ? 'md:flex-row-reverse' : ''}`}>
              <img 
-               src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
-               alt="Google" 
-               className="w-8 h-8" 
-             />
+  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+  alt="Google" 
+  className="w-8 h-8" 
+/>
              <p className="text-[#002B5B] font-bold text-sm md:text-base">
                 {isAr ? 'تقييمات موثوقة ١٠٠٪ عبر Google Business' : '100% Verified Reviews via Google Business'}
              </p>
