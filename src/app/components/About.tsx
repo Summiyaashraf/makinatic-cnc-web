@@ -25,10 +25,8 @@ const AboutSection = () => {
   ];
 
   return (
-    // Mobile par py-16 aur desktop par py-24 rakha hai
     <section className={`py-16 lg:py-24 bg-blue-200 overflow-hidden ${isAr ? 'text-right' : 'text-left'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Mobile par gap-10 aur text center (if needed), Desktop par gap-16 */}
         <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${isAr ? 'lg:flex-row-reverse' : ''}`}>
           
           {/* Left Side: Text Content */}
@@ -42,7 +40,7 @@ const AboutSection = () => {
                 : 'تعد "ماكيناتي سي إن سي" اسماً موثوقاً في حلول التصنيع الرقمي بالمملكة العربية السعودية، حيث نقدم الدقة والموثوقية والابتكار. نحن متخصصون في الآلات التي تلبي احتياجات الصناعة الحديثة.'}
             </p>
             
-            {/* Features Grid - Mobile par icons align kar diye hain */}
+            {/* Features Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               {features.map((f, i) => (
                 <div key={i} className={`flex flex-col gap-3 p-6 bg-blue-50 rounded-2xl border border-blue-600 ${isAr ? 'items-end' : 'items-start'}`}>
@@ -62,11 +60,10 @@ const AboutSection = () => {
               <img 
                 src="About.png" 
                 alt="Industrial Facility"
-                // Mobile par height 300px aur desktop par 450px taake screen na bhare
                 className="w-full h-[300px] md:h-[450px] object-cover"
               />
             </div>
-            {/* Design Element - Mobile par chote blur kiye hain taake overlap na ho */}
+            {/* Design Element */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl z-0 md:w-48 md:h-48 md:blur-3xl"></div>
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl z-0 md:w-48 md:h-48 md:blur-3xl"></div>
           </div>
