@@ -5,23 +5,17 @@ import AboutSection from "@/src/app/components/About";
 import Footer from "@/src/app/components/Footer";
 import Features from "@/src/app/components/Features";
 import ContactPage from "@/src/app/components/Contact";
-import { Suspense } from "react";
+import ReviewsPage from "./components/Review";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero /> 
-      <Suspense fallback={
-        <div className="py-20 text-center bg-[#061a80] text-white">
-          Loading Products...
-        </div>
-      }>
-        <ProductSection />
-      </Suspense>
-
+      <ProductSection />
       <AboutSection />
       <Features />
+      <ReviewsPage />
       <ContactPage />
       <Footer />
     </main>
