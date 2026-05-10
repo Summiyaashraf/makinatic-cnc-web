@@ -15,20 +15,22 @@ const translations = {
     products: "Products",
     profile: "Company Profile",
     contact: "Contact Us",
-    heroTitle: "High-Performance",
-    heroSub: "CNC Router 2140 / 2160",
-    heroDesc: "Precision engineering for heavy-duty industrial tasks. Our machines are designed for reliability, speed, and accuracy in every cut.",
-    viewMachines: "View Machines",
+    heroTitle: "Precision, Reliability, & Innovation",
+    heroDesc: "CNC Makinati is a trusted name in CNC machining solutions. We are committed to delivering machines that perform consistently, reduce production time, and maximize customer satisfaction.",
+    explore: "EXPLORE MACHINES",
+    contactBtn: "CONTACT US",
   },
   ar: {
+
     home: "الرئيسية",
-    products: "المنتجات",
+    products: "منتجاتنا",
     profile: "ملف الشركة",
-    contact: "اتصل بنا",
-    heroTitle: "أداء عالي",
-    heroSub: "ماكينة سي إن سي 2140 / 2160",
-    heroDesc: "هندسة دقيقة للمهام الصناعية الشاقة. آلاتنا مصممة للموثوقية والسرعة والدقة في كل عملية قطع.",
-    viewMachines: "عرض الآلات",
+    contact: "تواصل معنا",
+
+    heroTitle: "دقة، موثوقية، وابتكار",
+    heroDesc: "ماكيناتي سي إن سي اسم موثوق في حلول التصنيع الآلي. نحن ملتزمون بتقديم معدات تعمل بكفاءة عالية، وتقلل من وقت الإنتاج، وتحقق أقصى درجات رضا العملاء.",
+    explore: "تصفح المعدات",
+    contactBtn: "تواصل معنا",
   }
 };
 
