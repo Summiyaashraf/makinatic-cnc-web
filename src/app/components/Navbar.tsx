@@ -1,19 +1,14 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react'; // Suspense add kiya
 import Image from 'next/image';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import Link from 'next/link';
 
-const Navbar = () => {
+const NavbarContent = () => { 
   const [isOpen, setIsOpen] = useState(false);
   const [isProductOpen, setIsProductOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const industries = [
     { id: 'Singe Industry', label: language === 'ar' ? 'صناعة الإشارات' : 'Singe Industry' },
@@ -21,8 +16,6 @@ const Navbar = () => {
     { id: 'Metal Factory', label: language === 'ar' ? 'مصنع المعادن' : 'Metal Factory' },
     { id: 'Aluminum & Glass Fabrication Industry', label: language === 'ar' ? 'صناعة الألمنيوم والزجاج' : 'Aluminum & Glass Fabrication Industry' }
   ];
-
-  if (!mounted) return <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 h-20 shadow-sm" />;
 
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -148,6 +141,24 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+  );
+};
+
+const Navbar = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <nav className="h-20 bg-white border-b border-gray-100 shadow-sm" />;
+  }
+
+  return (
+    <Suspense fallback={<nav className="h-20 bg-white border-b border-gray-100 shadow-sm" />}>
+      <NavbarContent />
+    </Suspense>
   );
 };
 
