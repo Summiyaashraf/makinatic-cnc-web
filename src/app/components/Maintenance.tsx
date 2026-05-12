@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Wrench, Settings, ShieldCheck } from 'lucide-react';
 
 interface MaintenanceProps {
-  isAr?: boolean; // Optional banaya taake TS error na de
+  isAr?: boolean; 
 }
 
 const MaintenanceSection = ({ isAr = false }: MaintenanceProps) => {
