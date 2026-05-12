@@ -34,7 +34,7 @@ const MaintenanceSection = ({ isAr = false }: MaintenanceProps) => {
   ];
 
   return (
-    <section className="py-20 bg-blue-50" dir={isAr ? 'rtl' : 'ltr'}>
+    <section className="py-20 bg-blue-500" dir={isAr ? 'rtl' : 'ltr'}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-[#002B5B] mb-4">
