@@ -103,7 +103,7 @@ export const machinesData = [
   },
   {
     id: "MK 1325",
-    name: "CNC ROUTER WM 1325",
+    name: "CNC ROUTER WM 1325-S",
     industries: ["Wood Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
     mainImage: "/router-1325.png",
     shortDesc: "International Brand | European Standard | Local services",
@@ -138,7 +138,6 @@ export const machinesData = [
       { label: "15. Voltage", value: "3 Phase 380V, 60HZ / Single Phase 220V , 60 Hz" },
       { label: "16. Surroundings", value: "Temperature: 0-45℃; humidity:30%-75%" }
     ],
-    // PDF Page 3 par jo images hain
     spareParts: [
       { title: "6.0KW HSD Air Cooling Spindle", img: "/k1.png" },
       { title: "Remote", img: "/k2.png" },
@@ -184,7 +183,6 @@ export const machinesData = [
       { label: "15. Weight", value: "450KG" },
       { label: "16. Packing size", value: "1990*1540*1260mm(L*W*H)" }
     ],
-    // PDF Page 3 par jo images hain
     spareParts: [
       { title: "High Class Model, New Design CuttingHead", img: "/c1.png" },
       { title: "SPT C130W(130W-150W)LASER TUBE", img: "/c2.png" },
