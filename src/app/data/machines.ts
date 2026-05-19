@@ -260,7 +260,7 @@ export const machinesData = [
   },
 {
     id: "MK-3015-3KW",
-    name: "CNC Fiber Laser Machine 3KW",
+    name: "CNC Fiber Laser Machine 3KW-S",
     industries: ["Metal Factory", "Singe Industry"],
     mainImage: "/fiber-laser.jpeg", 
     shortDesc: "High Precision | Metal Cutting Solution | 3000W",
@@ -308,7 +308,7 @@ export const machinesData = [
   },
   {
     id: "MK-3015-6KW",
-    name: "CNC Fiber Laser Machine 6KW",
+    name: "CNC Fiber Laser Machine 6KW-S",
     industries: ["Metal Factory", "Singe Industry"],
     mainImage: "/fiber-laser.jpeg", 
     shortDesc: "Heavy Duty Metal Cutting | 6000W Power",
