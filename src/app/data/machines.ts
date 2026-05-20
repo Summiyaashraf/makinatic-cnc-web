@@ -1,6 +1,64 @@
 export const machinesData = [
   {
     id: "MK-2160S",
+    name: "CNC ROUTER MK-2140",
+    industries: ["Wood Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
+    mainImage: "/router-2140.png", 
+    shortDesc: "International Brand | European Standard | Local Services",
+    mainParts: [
+      { sr: "1", part: "Spindle", spec: "Original 6.0KW HSD Air Cooling Spindle" },
+      { sr: "2", part: "Driving Motors and Drivers", spec: "X Axis: 1500W LS Servo Motor+ Driver" },
+      { sr: "3", part: "Control System", spec: "Original A11 DSP Control System" },
+      { sr: "4", part: "Rails", spec: "High Precision HIWIN Square Rails" },
+      { sr: "5", part: "Blocks", spec: "High Precision HIWIN Blocks" },
+      { sr: "6", part: "Ball Screw", spec: "High Precision Taiwan Designed Ball Screw" },
+      { sr: "7", part: "Rack and Opinion", spec: "High Precision Taiwan Designed Helical Tooth" },
+      { sr: "8", part: "Spindle quantity", spec: "One Spindle" },
+      { sr: "9", part: "Machine Structure", spec: "Heavy Duty Structure and Strong Structure (Double Strengthened Structure)" },
+      { sr: "10", part: "Working Table", spec: "T-slot/Vacuum Working Table" },
+      { sr: "11", part: "Electronics", spec: "Original France Schneider Brands" },
+      { sr: "12", part: "Tool Sensor", spec: "Included" },
+      { sr: "13", part: "Dust Collector", spec: "3.0KW Double Bags Dust Collector" }
+    ],
+    parameters: [
+      { label: "1. Max. engraving area", value: "2100 * 4000" },
+      { label: "2. Acceptable material thickness", value: "300mm" },
+      { label: "3. Working table", value: "T-slot / Vacuum Working Table" },
+      { label: "4. Working table size", value: "2100mm*4000mm" },
+      { label: "5. Processing resolution", value: "±0.1mm" },
+      { label: "6. Re positioning resolution", value: "±0.02mm" },
+      { label: "7. Spindle motor", value: "Original 6.0KW HSD Air Cooling Spindle" },
+      { label: "8. Spindle rotating speed", value: "18000rpm" },
+      { label: "9. Transmitting system", value: "X\Y axis Rack and Opinion+ Square guide; Z axis ball screw+ Square guide" },
+      { label: "10. Driving motor", value: "1500W LS Servo Motor+ Driver" },
+      { label: "11. Power consumption", value: "2.0KW" },
+      { label: "12. Empty Traveling Speed", value: "≥60000mm/min" },
+      { label: "13. Processing Speed", value: "≥60000mm/min" },
+      { label: "14. Spindle Quantity", value: "1 spindle" },
+      { label: "15. Control system", value: "A11 DSP Control System (Original Brand)" },
+      { label: "16. Format", value: "G code" },
+      { label: "17. Voltage", value: "3 Phase 380V, 60HZ" },
+      { label: "18. Surroundings", value: "Temperature: 0-45℃; humidity:30%-75% " },
+      { label: "19. Net Weight", value: "3350KG" },
+      { label: "20. Packing Size", value: "6550mm * 2290mm * 1900mm" }
+    ],
+    spareParts: [
+      { title: "6.0KW HSD Air Cooling Spindle", img: "/s1.png" },
+      { title: "A11 DSP Controller", img: "/s2.png" },
+      { title: "Original 1500W Leadshine Servo Motor", img: "/s3.png" },
+      { title: "7.5KW Fuling Inverter", img: "/s4.png" },
+      { title: "Lubrication pump", img: "/s5.png" },
+      { title: "Rail Guide", img: "/s6.png" },
+      { title: "High Precision Taiwan HIWIN Square Rails 25mm", img: "/s7.png" },
+      { title: "High Precision Taiwan PMI Square Blocks 25mm", img: "/s8.png" },
+      { title: "X Axis Installed 75mm Full Cover Chains ", img: "/s9.png" },
+      { title: "YAxis Installed 100mm Full Cover Chains", img: "/s10.png" },
+      { title: "Original France Schneider Contactor", img: "/s11.png" },
+      { title: "Cleaning Brush Metal For XY Axis for cleaning Rails from Dust damage", img: "/s12.png" }
+    ]
+  },
+  {
+    id: "MK-2160S",
     name: "CNC ROUTER MK-2160S",
     industries: ["Wood Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
     mainImage: "/router-2160S.png", 
@@ -466,7 +524,7 @@ export const machinesData = [
   },
   {
     id: "WM-FIBER-2026",
-    name: "WM Fiber Laser Cutting 3KW (2026 Edition)",
+    name: "CNC Fiber Laser 3KW-S",
     industries: ["Metal Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
     mainImage: "/fiber-cutting.png", 
     shortDesc: "2026 Model | Intelligent Anti-shake | 3000W",
@@ -506,6 +564,49 @@ export const machinesData = [
       { title: "Brass", img: "/b-4.png" }
     ]
   },
+  {
+  id: "MK-3015-6KW",
+  name: "CNC Fiber Laser 6KW-S",
+  industries: ["Metal Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
+  mainImage: "/fiber-cutting.png", 
+  shortDesc: "6000W High Efficiency | Italian COLGAR Milling Base | High-Precision Linear Guide",
+  mainParts: [
+    { sr: "1", part: "Laser Module", spec: "MAX 6KW" },
+    { sr: "2", part: "Cutting Head", spec: "Raytools BM03K (Auto Focus, Accuracy 0.05mm)" },
+    { sr: "3", part: "Control System", spec: "X6000 Raytools (Professional CNC System)" },
+    { sr: "4", part: "Servo Motor & Driver", spec: "Innovance (Y: 1.3KW, X: 0.85KW, Z: 0.4KW)" },
+    { sr: "5", part: "Linear Guide", spec: "Taiwan Hiwin" },
+    { sr: "6", part: "Reducer", spec: "Japan Shampo" },
+    { sr: "7", part: "Pneumatic Components", spec: "Japan SMC" },
+    { sr: "8", part: "Water Chiller", spec: "Hanli Water Chiller (Auto Temperature ~25°C)" },
+    { sr: "9", part: "Crossbeam", spec: "High Precision One-Body Stretch Aluminum Beam" }
+  ],
+  parameters: [
+    { label: "1. Machine Model", value: "3015" },
+    { label: "2. Working Size / Area", value: "3000mm * 1500mm" },
+    { label: "3. Laser Power", value: "6KW" },
+    { label: "4. Laser Source", value: "MAX" },
+    { label: "5. Laser Head Type", value: "Raytools" },
+    { label: "6. Control System Type", value: "X6000 (Raytools)" },
+    { label: "7. Machine Weight", value: "4 Tons (4000 Kg)" },
+    { label: "8. Positioning Accuracy", value: "±0.01mm" },
+    { label: "9. Maximum Cutting Speed", value: "140m/min" },
+    { label: "10. Moving / Linkage Speed", value: "60m/min" },
+    { label: "11. Cutting Thickness Range", value: "0 - 40mm" },
+    { label: "12. Machine Base Frame", value: "Sectional tube welding bed with 24 hours quenching process" },
+    { label: "13. Machine Base Milling", value: "Italian COLGAR machine milling boring" },
+    { label: "14. Machine Error Accuracy", value: "0.02mm" },
+    { label: "15. Voltage & Phase", value: "380V / 50/60HZ, 3 Phase" },
+    { label: "16. Total Power Consumption", value: "10KW/H (Laser: 6KW, Bed: 4KW, Chiller+Fan: 3KW)" }
+
+  ],
+  spareParts: [
+    { title: "Carbon steel", img: "/carbon-steel.png" },
+    { title: "Stainless steel", img: "/stainless-steel.png" },
+    { title: "Aluminum", img: "/aluminum.png" },
+    { title: "Brass", img: "/brass.png" }
+  ]
+}
   {
     id: "PANEL-SAW-3200",
     name: "PANEL SAW 3200 (European Standard)",
