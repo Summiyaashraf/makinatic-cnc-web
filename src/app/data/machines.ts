@@ -3,7 +3,7 @@ export const machinesData = [
     id: "MK-2160S",
     name: "CNC ROUTER MK-2140",
     industries: ["Wood Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
-    mainImage: "/router-2140.png", 
+    mainImage: "/router-2140.jpeg", 
     shortDesc: "International Brand | European Standard | Local Services",
     mainParts: [
       { sr: "1", part: "Spindle", spec: "Original 6.0KW HSD Air Cooling Spindle" },
