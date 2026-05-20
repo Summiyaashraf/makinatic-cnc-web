@@ -526,7 +526,7 @@ export const machinesData = [
     id: "WM-FIBER-2026",
     name: "CNC Fiber Laser 3KW-S",
     industries: ["Metal Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
-    mainImage: "/fiber-cutting.png", 
+    mainImage: "/fiber-S.png", 
     shortDesc: "2026 Model | Intelligent Anti-shake | 3000W",
     mainParts: [
       { sr: "1", part: "Rack Pinion", spec: "YYC" },
@@ -568,7 +568,7 @@ export const machinesData = [
   id: "MK-3015-6KW",
   name: "CNC Fiber Laser 6KW-S",
   industries: ["Metal Factory", "Singe Industry", "Aluminum & Glass Fabrication Industry"],
-  mainImage: "/fiber-cutting.png", 
+  mainImage: "/fiber-S.png", 
   shortDesc: "6000W High Efficiency | Italian COLGAR Milling Base | High-Precision Linear Guide",
   mainParts: [
     { sr: "1", part: "Laser Module", spec: "MAX 6KW" },
