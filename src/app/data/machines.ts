@@ -705,7 +705,7 @@ export const machinesData = [
     id: "QH-3000-WELD-NEW",
     name: "Multi-functions Laser Welding 3000W",
     industries: ["Metal Fabrication", "Industrial Manufacturing", "Maintenance Workshops"],
-    mainImage: "/welding-machine.png", 
+    mainImage: "/welding.png", 
     shortDesc: "3-in-1 Solution | 3000W Fiber Source | Continuous 24h Operation",
     mainParts: [
       { sr: "1", part: "Fiber Laser Source", spec: "1 Set - MAX Brand" },
