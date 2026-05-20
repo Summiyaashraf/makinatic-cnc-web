@@ -606,7 +606,7 @@ export const machinesData = [
     { title: "Aluminum", img: "/aluminum.png" },
     { title: "Brass", img: "/brass.png" }
   ]
-}
+},
   {
     id: "PANEL-SAW-3200",
     name: "PANEL SAW 3200 (European Standard)",
