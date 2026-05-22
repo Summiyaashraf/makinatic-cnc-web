@@ -36,13 +36,13 @@ const sparePartsData = [
   { id: 22, nameEn: "CNC Co2 Laser Head", nameAr: "رأس ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-head.png", "/co2-head.png"] },
   { id: 23, nameEn: "CNC Co2 Lens", nameAr: "عدسة ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-lens.png", "/co2-lens.png"] },
   { id: 24, nameEn: "CNC Co2 Mirror", nameAr: "مرايا ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-mirror.png", "/co2-mirror.png"] },
-  { id: 22, nameEn: "CNC CO2 Laser Tube", nameAr: "أنبوب ليزر CO2 CNC", category: "CO2 Laser", images: ["/laser-tube-1.png", "/laser-tube-2.png"] },
-  { id: 23, nameEn: "CNC Co2 Power Supply", nameAr: " مزود طاقة ليزر CO2 CNC", category: "CO2 Laser", images: ["/power-supply-1.png", "/power-supply-2.png"] },
-  { id: 24, nameEn: "CNC CO2 RD Controller", nameAr: "جهاز تحكم ليزر CO2 CNC", category: "CO2 Laser", images: ["/controller.png", "/controller.png"] },
-  { id: 24, nameEn: "CNC CO2 Chiller", nameAr: "مبرد ليزر CO2 CNC", category: "CO2 Laser", images: ["/chiller-co2.png", "/chiller-co2.png"] }
+  { id: 25, nameEn: "CNC CO2 Laser Tube", nameAr: "أنبوب ليزر CO2 CNC", category: "CO2 Laser", images: ["/laser-tube-1.png", "/laser-tube-2.png"] },
+  { id: 26, nameEn: "CNC Co2 Power Supply", nameAr: " مزود طاقة ليزر CO2 CNC", category: "CO2 Laser", images: ["/power-supply-1.png", "/power-supply-2.png"] },
+  { id: 27, nameEn: "CNC CO2 RD Controller", nameAr: "جهاز تحكم ليزر CO2 CNC", category: "CO2 Laser", images: ["/controller.png", "/controller.png"] },
+  { id: 28, nameEn: "CNC CO2 Chiller", nameAr: "مبرد ليزر CO2 CNC", category: "CO2 Laser", images: ["/chiller-co2.png", "/chiller-co2.png"] }
 ];
 
-// Inner component for individual part card image slider logic
+// Slider component for individual part card images
 const PartCardImageSlider = ({ images, altName }: { images: string[]; altName: string }) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
@@ -57,36 +57,34 @@ const PartCardImageSlider = ({ images, altName }: { images: string[]; altName: s
   };
 
   return (
-    <div className="h-56 bg-gray-100 flex items-center justify-center border-b border-gray-100 relative group overflow-hidden">
-      {/* Product Image */}
-      <div className="w-full h-full relative bg-[#f4f4f5]"> 
+    // Fixed image height with aspect-square and flex center layout to ensure symmetry across all rows
+    <div className="w-full aspect-square md:h-64 bg-white flex items-center justify-center border-b border-gray-100 relative group overflow-hidden">
+      <div className="w-full h-full relative bg-[#f8f9fa]"> 
         <Image
           src={images[currentImgIndex]}
           alt={altName}
           fill
           sizes="(max-w-7xl) 33vw"
-          className="object-contain p-4 mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
+          className="object-contain p-6 mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
           priority={false}
         />
       </div>
 
-      {/* Slider Navigation Buttons */}
       {images.length > 1 && (
         <>
           <button 
             onClick={handlePrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
           >
             <ChevronLeft size={18} />
           </button>
           <button 
             onClick={handleNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
           >
             <ChevronRight size={18} />
           </button>
 
-          {/* Dots Indicator */}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
             {images.map((_, idx) => (
               <span 
@@ -113,6 +111,17 @@ function SparePartsContent() {
       setActiveTab(categoryParam);
     }
   }, [categoryParam]);
+
+  // WhatsApp Quote function
+  const handleRequestQuote = (partNameEn: string, partNameAr: string) => {
+    const phoneNumber = "966535564101"; // Client's official KSA phone number from quote sheet
+    const message = language === 'ar'
+      ? `مرحباً ماكيناتي، أود طلب تسعيرة لقطعة الغيار التالية: ${partNameAr}`
+      : `Hello Makinati, I would like to request a quote for the following spare part: ${partNameEn}`;
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   const categories = [
     { id: 'All', label: language === 'ar' ? 'الكل' : 'All Parts' },
@@ -176,13 +185,16 @@ function SparePartsContent() {
                     {part.category === 'CO2 Laser' && (language === 'ar' ? 'سي أو تو ليزر' : 'CO2 Laser')}
                   </span>
                   
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug min-h-[3rem] flex items-center">
                     {language === 'ar' ? part.nameAr : part.nameEn}
                   </h3>
                 </div>
 
                 <div className="mt-6">
-                  <button className="w-full bg-[#002B5B] text-white py-2.5 rounded-xl font-bold text-sm hover:bg-[#0056b3] transition-colors shadow-sm">
+                  <button 
+                    onClick={() => handleRequestQuote(part.nameEn, part.nameAr)}
+                    className="w-full bg-[#002B5B] text-white py-2.5 rounded-xl font-bold text-sm hover:bg-[#0056b3] transition-colors shadow-sm"
+                  >
                     {language === 'ar' ? 'طلب تسعيرة' : 'Request Quote'}
                   </button>
                 </div>
