@@ -1,14 +1,20 @@
 "use client";
-import React, { useState, useEffect, Suspense } from 'react'; // Suspense add kiya
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, Wrench, Settings } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import Link from 'next/link';
 
-const NavbarContent = () => { 
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isSpareOpen, setIsSpareOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const industries = [
     { id: 'Singe Industry', label: language === 'ar' ? 'صناعة الإشارات' : 'Singe Industry' },
@@ -16,6 +22,14 @@ const NavbarContent = () => {
     { id: 'Metal Factory', label: language === 'ar' ? 'مصنع المعادن' : 'Metal Factory' },
     { id: 'Aluminum & Glass Fabrication Industry', label: language === 'ar' ? 'صناعة الألمنيوم والزجاج' : 'Aluminum & Glass Fabrication Industry' }
   ];
+
+  const spareCategories = [
+    { id: 'CNC Router', label: language === 'ar' ? 'قطع غيار سي إن سي راوتر' : 'CNC Router Parts' },
+    { id: 'Fiber Laser', label: language === 'ar' ? 'قطع غيار فايبر ليزر' : 'Fiber Laser Parts' },
+    { id: 'CO2 Laser', label: language === 'ar' ? 'قطع غيار سي أو تو ليزر' : 'CO2 Laser Parts' }
+  ];
+
+  if (!mounted) return <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 h-20 shadow-sm" />;
 
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -72,6 +86,43 @@ const NavbarContent = () => {
               )}
             </div>
 
+            {/* Spare Parts & Services Dropdown */}
+            <div 
+              className="relative group h-20 flex items-center"
+              onMouseEnter={() => setIsSpareOpen(true)}
+              onMouseLeave={() => setIsSpareOpen(false)}
+            >
+              <button className="flex items-center gap-1 text-gray-600 group-hover:text-[#0056b3] font-semibold transition-colors">
+                {language === 'ar' ? 'قطع الغيار والخدمات' : 'Parts & Services'}
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isSpareOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isSpareOpen && (
+                <div className="absolute top-[80%] left-0 w-72 bg-white border border-gray-100 shadow-xl rounded-xl py-2 animate-in fade-in zoom-in duration-200 z-[60]">
+                  <p className="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                    {language === 'ar' ? 'قطع الغيار' : 'Spare Parts'}
+                  </p>
+                  {spareCategories.map((cat) => (
+                    <Link
+                      key={cat.id}
+                      href={`/spare-parts?category=${encodeURIComponent(cat.id)}`}
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#0056b3] font-medium"
+                    >
+                      {cat.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-gray-100 my-2"></div>
+                  <Link 
+                    href="#MaintenanceSection" 
+                    className="flex items-center gap-2 px-4 py-3 text-sm font-bold text-[#0056b3] hover:bg-blue-50"
+                  >
+                    <Settings size={16} />
+                    {language === 'ar' ? 'خدمات الصيانة والدعم' : 'Maintenance & Support'}
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link href="/company-profile" className="text-gray-600 hover:text-[#0056b3] font-semibold transition-colors">
               {t('profile')}
             </Link>
@@ -103,33 +154,44 @@ const NavbarContent = () => {
               {t('home')}
             </Link>
             
-            <div className="space-y-1">
-              <button 
-                onClick={() => setIsProductOpen(!isProductOpen)}
-                className="w-full flex justify-between items-center px-4 py-3 text-base font-bold text-gray-700 hover:bg-blue-50 rounded-xl"
-              >
-                {t('products')}
-                <ChevronDown size={20} className={isProductOpen ? 'rotate-180' : ''} />
-              </button>
-              
-              {isProductOpen && (
-                <div className="bg-gray-50 rounded-xl mx-2 py-2">
-                  <Link href="/products" className="block px-8 py-2 text-sm font-bold text-[#0056b3]" onClick={() => setIsOpen(false)}>
-                    {language === 'ar' ? 'جميع الآلات' : 'All Machines'}
+            {/* Products Mobile */}
+            <button 
+              onClick={() => setIsProductOpen(!isProductOpen)}
+              className="w-full flex justify-between items-center px-4 py-3 text-base font-bold text-gray-700 hover:bg-blue-50 rounded-xl"
+            >
+              {t('products')}
+              <ChevronDown size={20} className={isProductOpen ? 'rotate-180' : ''} />
+            </button>
+            {isProductOpen && (
+              <div className="bg-gray-50 rounded-xl mx-2 py-2">
+                {industries.map((ind) => (
+                  <Link key={ind.id} href={`/products?industry=${encodeURIComponent(ind.id)}`} className="block px-8 py-2 text-sm text-gray-600" onClick={() => setIsOpen(false)}>
+                    {ind.label}
                   </Link>
-                  {industries.map((ind) => (
-                    <Link
-                      key={ind.id}
-                      href={`/products?industry=${encodeURIComponent(ind.id)}`}
-                      className="block px-8 py-2 text-sm text-gray-600"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {ind.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+                ))}
+              </div>
+            )}
+
+            {/* Spare Parts & Maintenance Mobile */}
+            <button 
+              onClick={() => setIsSpareOpen(!isSpareOpen)}
+              className="w-full flex justify-between items-center px-4 py-3 text-base font-bold text-gray-700 hover:bg-blue-50 rounded-xl"
+            >
+              {language === 'ar' ? 'قطع الغيار والخدمات' : 'Parts & Services'}
+              <ChevronDown size={20} className={isSpareOpen ? 'rotate-180' : ''} />
+            </button>
+            {isSpareOpen && (
+              <div className="bg-gray-50 rounded-xl mx-2 py-2">
+                {spareCategories.map((cat) => (
+                  <Link key={cat.id} href={`/spare-parts?category=${encodeURIComponent(cat.id)}`} className="block px-8 py-2 text-sm text-gray-600" onClick={() => setIsOpen(false)}>
+                    {cat.label}
+                  </Link>
+                ))}
+                <Link href="#MaintenanceSection" className="block px-8 py-2 text-sm font-bold text-[#0056b3] border-t border-gray-200 mt-2 pt-2" onClick={() => setIsOpen(false)}>
+                  {language === 'ar' ? 'خدمات الصيانة' : 'Maintenance Services'}
+                </Link>
+              </div>
+            )}
 
             <Link href="/company-profile" className="block px-4 py-3 text-base font-bold text-gray-700 rounded-xl" onClick={() => setIsOpen(false)}>
               {t('profile')}
@@ -141,24 +203,6 @@ const NavbarContent = () => {
         </div>
       )}
     </nav>
-  );
-};
-
-const Navbar = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <nav className="h-20 bg-white border-b border-gray-100 shadow-sm" />;
-  }
-
-  return (
-    <Suspense fallback={<nav className="h-20 bg-white border-b border-gray-100 shadow-sm" />}>
-      <NavbarContent />
-    </Suspense>
   );
 };
 
