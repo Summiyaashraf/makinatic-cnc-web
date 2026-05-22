@@ -8,38 +8,38 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const sparePartsData = [
   // === FIBER LASER PARTS ===
-  { id: 1, nameEn: "Fiber Laser Head 6KW", nameAr: "رأس فايبر ليزر 6 كيلو واط", category: "Fiber Laser", images: ["/fiber-head-1.jpg", "/fiber-head-2.jpg"] },
-  { id: 2, nameEn: "Fiber Laser Remote", nameAr: "جهاز تحكم لاسلكي للفايبر ليزر", category: "Fiber Laser", images: ["/fiber-remote.jpg", "/fiber-remote.jpg"] },
-  { id: 3, nameEn: "Fiber Laser Lenses", nameAr: "عدسات فايبر ليزر", category: "Fiber Laser", images: ["/fiber-lenses-1.jpg", "/fiber-lenses-2.jpg"] },
-  { id: 4, nameEn: "Fiber Laser Ceramic Ring", nameAr: "حلقة سيراميك فايبر ليزر", category: "Fiber Laser", images: ["/ceramic-ring-1.jpg", "/ceramic-ring-2.jpg"] },
-  { id: 5, nameEn: "Fiber Laser Lens Connector", nameAr: "موصل عدسة فايبر ليزر", category: "Fiber Laser", images: ["/lens-connector-1.jpg", "/lens-connector-2.jpg"] },
-  { id: 6, nameEn: "Fiber Laser Nozzles", nameAr: "فوهات (نوزل) فايبر ليزر", category: "Fiber Laser", images: ["/nozzles-1.jpg", "/nozzles-2.jpg"] },
-  { id: 7, nameEn: "CNC Fiber Laser Chillers", nameAr: "مبردات فايبر ليزر CNC", category: "Fiber Laser", images: ["/chiller.jpg", "/chiller.jpg"] },
-  { id: 8, nameEn: "CNC Fiber Control Card", nameAr: "كرت تحكم فايبر ليزر CNC", category: "Fiber Laser", images: ["/control-card.jpg", "/control-card.jpg"] },
-  { id: 9, nameEn: "Servo Motors", nameAr: "محركات سيرفو", category: "Fiber Laser", images: ["/servo-motor.jpg", "/servo-motor.jpg"] },
+  { id: 1, nameEn: "Fiber Laser Head 6KW", nameAr: "رأس فايبر ليزر 6 كيلو واط", category: "Fiber Laser", images: ["/fiber-head-1.png", "/fiber-head-2.png"] },
+  { id: 2, nameEn: "Fiber Laser Remote", nameAr: "جهاز تحكم لاسلكي للفايبر ليزر", category: "Fiber Laser", images: ["/fiber-remote.png", "/fiber-remote.png"] },
+  { id: 3, nameEn: "Fiber Laser Lenses", nameAr: "عدسات فايبر ليزر", category: "Fiber Laser", images: ["/fiber-lenses-1.png", "/fiber-lenses-2.png"] },
+  { id: 4, nameEn: "Fiber Laser Ceramic Ring", nameAr: "حلقة سيراميك فايبر ليزر", category: "Fiber Laser", images: ["/ceramic-ring-1.png", "/ceramic-ring-2.png"] },
+  { id: 5, nameEn: "Fiber Laser Lens Connector", nameAr: "موصل عدسة فايبر ليزر", category: "Fiber Laser", images: ["/lens-connector-1.png", "/lens-connector-2.png"] },
+  { id: 6, nameEn: "Fiber Laser Nozzles", nameAr: "فوهات (نوزل) فايبر ليزر", category: "Fiber Laser", images: ["/nozzles-1.png", "/nozzles-2.png"] },
+  { id: 7, nameEn: "CNC Fiber Laser Chillers", nameAr: "مبردات فايبر ليزر CNC", category: "Fiber Laser", images: ["/chiller.png", "/chiller.png"] },
+  { id: 8, nameEn: "CNC Fiber Control Card", nameAr: "كرت تحكم فايبر ليزر CNC", category: "Fiber Laser", images: ["/control-card.png", "/control-card.png"] },
+  { id: 9, nameEn: "Servo Motors", nameAr: "محركات سيرفو", category: "Fiber Laser", images: ["/servo-motor.png", "/servo-motor.png"] },
 
   // === CNC ROUTER PARTS ===
-  { id: 10, nameEn: "CNC Router Controller DSP A11", nameAr: "جهاز تحكم سي إن سي راوتر DSP A11", category: "CNC Router", images: ["/dsp-a11-1.jpg", "/dsp-a11-2.jpg"] },
-  { id: 11, nameEn: "Yako Drive", nameAr: "متحرك ياكو (Yako Drive)", category: "CNC Router", images: ["/yako-drive.jpg", "/yako-drive.jpg"] },
-  { id: 12, nameEn: "Yaskawa Servo Drive", nameAr: "متحرك سيرفو ياسكاوا", category: "CNC Router", images: ["/yaskawa-drive.jpg", "/yaskawa-drive.jpg"] },
-  { id: 13, nameEn: "CNC HGH Bearings / Rails", nameAr: "سكة ومحامل CNC HGH", category: "CNC Router", images: ["/bearings-1.jpg", "/bearings-2.jpg"] },
-  { id: 14, nameEn: "CNC Router Air Cool Spindle", nameAr: "مغزل تبريد هواء لسي إن سي راوتر", category: "CNC Router", images: ["/air-spindle-1.jpg", "/air-spindle-2.jpg"] },
-  { id: 15, nameEn: "CNC Router Water Cool Spindle", nameAr: "مغزل تبريد ماء لسي إن سي راوتر", category: "CNC Router", images: ["/water-spindle.jpg", "/water-spindle.jpg"] },
-  { id: 16, nameEn: "CNC Router Best Inverter", nameAr: "إنفيرتر سي إن سي راوتر", category: "CNC Router", images: ["/inverter.jpg", "/inverter.jpg"] },
-  { id: 17, nameEn: "CNC Router Sensors", nameAr: "حساسات سي إن سي راوتر", category: "CNC Router", images: ["/sensors-1.jpg", "/sensors-2.jpg"] },
-  { id: 18, nameEn: "CNC Router Collets", nameAr: "كوليتات سي إن سي راوتر", category: "CNC Router", images: ["/collets.jpg", "/collets.jpg"] },
-  { id: 19, nameEn: "CNC Router Tools / Bits", nameAr: "ريش وأدوات سي إن سي راوتر", category: "CNC Router", images: ["/bits.jpg", "/bits.jpg"] },
-  { id: 20, nameEn: "CNC ROUTER Dust Collector", nameAr: "جامع غبار لسي إن سي راوتر", category: "CNC Router", images: ["/dust-collector.jpg", "/dust-collector.jpg"] },
-  { id: 21, nameEn: "CNC Router Oil Box / Pump", nameAr: "مضخة زيت لسي إن سي راوتر", category: "CNC Router", images: ["/oil-pump.jpg", "/oil-pump.jpg"] },
+  { id: 10, nameEn: "CNC Router Controller DSP A11", nameAr: "جهاز تحكم سي إن سي راوتر DSP A11", category: "CNC Router", images: ["/dsp-a11-1.png", "/dsp-a11-2.png"] },
+  { id: 11, nameEn: "Yako Drive", nameAr: "متحرك ياكو (Yako Drive)", category: "CNC Router", images: ["/yako-drive.png", "/yako-drive.png"] },
+  { id: 12, nameEn: "Yaskawa Servo Drive", nameAr: "متحرك سيرفو ياسكاوا", category: "CNC Router", images: ["/yaskawa-drive.png", "/yaskawa-drive.png"] },
+  { id: 13, nameEn: "CNC HGH Bearings / Rails", nameAr: "سكة ومحامل CNC HGH", category: "CNC Router", images: ["/bearings-1.png", "/bearings-2.png"] },
+  { id: 14, nameEn: "CNC Router Air Cool Spindle", nameAr: "مغزل تبريد هواء لسي إن سي راوتر", category: "CNC Router", images: ["/air-spindle-1.png", "/air-spindle-2.png"] },
+  { id: 15, nameEn: "CNC Router Water Cool Spindle", nameAr: "مغزل تبريد ماء لسي إن سي راوتر", category: "CNC Router", images: ["/water-spindle.png", "/water-spindle.png"] },
+  { id: 16, nameEn: "CNC Router Best Inverter", nameAr: "إنفيرتر سي إن سي راوتر", category: "CNC Router", images: ["/inverter.png", "/inverter.png"] },
+  { id: 17, nameEn: "CNC Router Sensors", nameAr: "حساسات سي إن سي راوتر", category: "CNC Router", images: ["/sensors-1.png", "/sensors-2.png"] },
+  { id: 18, nameEn: "CNC Router Collets", nameAr: "كوليتات سي إن سي راوتر", category: "CNC Router", images: ["/collets.png", "/collets.png"] },
+  { id: 19, nameEn: "CNC Router Tools / Bits", nameAr: "ريش وأدوات سي إن سي راوتر", category: "CNC Router", images: ["/bits.png", "/bits.png"] },
+  { id: 20, nameEn: "CNC ROUTER Dust Collector", nameAr: "جامع غبار لسي إن سي راوتر", category: "CNC Router", images: ["/dust-collector.png", "/dust-collector.png"] },
+  { id: 21, nameEn: "CNC Router Oil Box / Pump", nameAr: "مضخة زيت لسي إن سي راوتر", category: "CNC Router", images: ["/oil-pump.png", "/oil-pump.png"] },
 
   // === CNC CO2 LASER PARTS ===
-  { id: 22, nameEn: "CNC Co2 Laser Head", nameAr: "رأس ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-head.jpg", "/co2-head.jpg"] },
-  { id: 23, nameEn: "CNC Co2 Lens", nameAr: "عدسة ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-lens.jpg", "/co2-lens.jpg"] },
-  { id: 24, nameEn: "CNC Co2 Mirror", nameAr: "مرايا ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-mirror.jpg", "/co2-mirror.jpg"] },
-  { id: 22, nameEn: "CNC CO2 Laser Tube", nameAr: "أنبوب ليزر CO2 CNC", category: "CO2 Laser", images: ["/laser-tube-1.jpg", "/laser-tube-2.jpg"] },
-  { id: 23, nameEn: "CNC Co2 Power Supply", nameAr: " مزود طاقة ليزر CO2 CNC", category: "CO2 Laser", images: ["/power-supply-1.jpg", "/power-supply-2.jpg"] },
-  { id: 24, nameEn: "CNC CO2 RD Controller", nameAr: "جهاز تحكم ليزر CO2 CNC", category: "CO2 Laser", images: ["/controller.jpg", "/controller.jpg"] },
-  { id: 24, nameEn: "CNC CO2 Chiller", nameAr: "مبرد ليزر CO2 CNC", category: "CO2 Laser", images: ["/chiller-co2.jpg", "/chiller-co2.jpg"] }
+  { id: 22, nameEn: "CNC Co2 Laser Head", nameAr: "رأس ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-head.png", "/co2-head.png"] },
+  { id: 23, nameEn: "CNC Co2 Lens", nameAr: "عدسة ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-lens.png", "/co2-lens.png"] },
+  { id: 24, nameEn: "CNC Co2 Mirror", nameAr: "مرايا ليزر CO2 CNC", category: "CO2 Laser", images: ["/co2-mirror.png", "/co2-mirror.png"] },
+  { id: 22, nameEn: "CNC CO2 Laser Tube", nameAr: "أنبوب ليزر CO2 CNC", category: "CO2 Laser", images: ["/laser-tube-1.png", "/laser-tube-2.png"] },
+  { id: 23, nameEn: "CNC Co2 Power Supply", nameAr: " مزود طاقة ليزر CO2 CNC", category: "CO2 Laser", images: ["/power-supply-1.png", "/power-supply-2.png"] },
+  { id: 24, nameEn: "CNC CO2 RD Controller", nameAr: "جهاز تحكم ليزر CO2 CNC", category: "CO2 Laser", images: ["/controller.png", "/controller.png"] },
+  { id: 24, nameEn: "CNC CO2 Chiller", nameAr: "مبرد ليزر CO2 CNC", category: "CO2 Laser", images: ["/chiller-co2.png", "/chiller-co2.png"] }
 ];
 
 // Inner component for individual part card image slider logic
