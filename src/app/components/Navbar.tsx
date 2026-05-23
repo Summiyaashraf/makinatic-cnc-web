@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Menu, X, Globe, ChevronDown, Wrench, Settings } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, Settings } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,30 @@ const Navbar = () => {
   const [isSpareOpen, setIsSpareOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
+  
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // FIXED: Cross-page smooth scroll handler logic
+  const handleMaintenanceScroll = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false); // Close mobile menu if open
+
+    if (pathname === '/') {
+      // If already on Home page, directly scroll smoothly
+      const element = document.getElementById('MaintenanceSection');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page (like /spare-parts), redirect to home with hash
+      router.push('/#MaintenanceSection');
+    }
+  };
 
   const industries = [
     { id: 'Singe Industry', label: language === 'ar' ? 'صناعة الإشارات' : 'Singe Industry' },
@@ -112,13 +133,16 @@ const Navbar = () => {
                     </Link>
                   ))}
                   <div className="border-t border-gray-100 my-2"></div>
-                  <Link 
-                    href="#MaintenanceSection" 
-                    className="flex items-center gap-2 px-4 py-3 text-sm font-bold text-[#0056b3] hover:bg-blue-50"
+                  
+                  {/* FIXED: Trigger custom explicit scroll click handler */}
+                  <button 
+                    onClick={handleMaintenanceScroll}
+                    className="w-full flex items-center gap-2 px-4 py-3 text-sm font-bold text-[#0056b3] hover:bg-blue-50 text-left"
+                    style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}
                   >
                     <Settings size={16} />
                     {language === 'ar' ? 'خدمات الصيانة والدعم' : 'Maintenance & Support'}
-                  </Link>
+                  </button>
                 </div>
               )}
             </div>
@@ -187,9 +211,13 @@ const Navbar = () => {
                     {cat.label}
                   </Link>
                 ))}
-                <Link href="/#MaintenanceSection" className="block px-8 py-2 text-sm font-bold text-[#0056b3] border-t border-gray-200 mt-2 pt-2" onClick={() => setIsOpen(false)}>
-                  {language === 'ar' ? 'خدمات الصيانة' : 'Maintenance Services'}
-                </Link>
+                {/* FIXED: Mobile scroll button click binding */}
+                <button 
+                  onClick={handleMaintenanceScroll} 
+                  className="w-full block text-right px-8 py-2 text-sm font-bold text-[#0056b3] border-t border-gray-200 mt-2 pt-2 bg-transparent"
+                >
+                  {language === 'ar' ? 'خدمات الصيانة والدعم' : 'Maintenance & Support'}
+                </button>
               </div>
             )}
 
