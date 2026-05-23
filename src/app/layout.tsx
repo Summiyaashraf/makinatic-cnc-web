@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import Script from "next/script"; // NEXT.JS SCRIPT IMPORT KIYA
+import Script from "next/script"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
