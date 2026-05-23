@@ -187,7 +187,7 @@ const Navbar = () => {
                     {cat.label}
                   </Link>
                 ))}
-                <Link href="#MaintenanceSection" className="block px-8 py-2 text-sm font-bold text-[#0056b3] border-t border-gray-200 mt-2 pt-2" onClick={() => setIsOpen(false)}>
+                <Link href="/#MaintenanceSection" className="block px-8 py-2 text-sm font-bold text-[#0056b3] border-t border-gray-200 mt-2 pt-2" onClick={() => setIsOpen(false)}>
                   {language === 'ar' ? 'خدمات الصيانة' : 'Maintenance Services'}
                 </Link>
               </div>
