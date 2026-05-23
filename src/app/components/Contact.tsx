@@ -10,7 +10,7 @@ const ContactPage = () => {
   const contactInfo = {
     phone: "0535564101",
     whatsapp: "966542677664",
-    email: "Info@cncmakinati.com", 
+    email: "ideas4cnc@gmail.com", 
     address: isAr 
       ? "٣٤٣٣ طريق الملك فهد، حي الفيصلية، جدة ٢٣٤٤٤" 
       : "23444-Alfaysalya District-King Fahad Road 3433 Jeddah",
