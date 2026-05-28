@@ -558,10 +558,13 @@ export const machinesData = [
 
     ],
     spareParts: [
-      { title: "Carbon steel", img: "/b-1.png" },
-      { title: "Stainless steel", img: "/b-2.png" },
-      { title: "Aluminum", img: "/b-3.png" },
-      { title: "Brass", img: "/b-4.png" }
+    { title: "High Stable Bed", img: "/stable-bed.png" },
+    { title: "Aluminum Beam", img: "/aluminum-beam.png" },
+    { title: "Control System", img: "/control-system.png" },
+    { title: "Driver system", img: "/driver-system.png" },
+    { title: "Laser Source", img: "/laser-source.png" },
+    { title: "Laser Head", img: "/laser-head.png" },
+    { title: "Water Chiller", img: "/water-chiler.png" }
     ]
   },
   {
@@ -601,10 +604,13 @@ export const machinesData = [
 
   ],
   spareParts: [
-    { title: "Carbon steel", img: "/carbon-steel.png" },
-    { title: "Stainless steel", img: "/stainless-steel.png" },
-    { title: "Aluminum", img: "/aluminum.png" },
-    { title: "Brass", img: "/brass.png" }
+    { title: "High Stable Bed", img: "/stable-bed.png" },
+    { title: "Aluminum Beam", img: "/aluminum-beam.png" },
+    { title: "Control System", img: "/control-system.png" },
+    { title: "Driver system", img: "/driver-system.png" },
+    { title: "Laser Source", img: "/laser-source.png" },
+    { title: "Laser Head", img: "/laser-head.png" },
+    { title: "Water Chiller", img: "/water-chiler.png" }
   ]
 },
   {
@@ -730,5 +736,41 @@ export const machinesData = [
       { title: "Multi-functions Laser Welding Machine", img: "/welding-machine.png" },
       
     ]
-  }
+  },
+  {
+    id: "MK-FLM-SPEC",
+    name: "Fiber Laser Marking Machine",
+    industries: ["Singe Industry", "Metal Factory", "Jewelry & Custom Engraving"],
+    mainImage: "/About.png", 
+    shortDesc: "High Precision | Compact Design | Air Cooled System",
+    mainParts: [
+      { sr: "1", part: "Laser Type", spec: "Fiber Laser" },
+      { sr: "2", part: "Wavelength", spec: "1064 nm" },
+      { sr: "3", part: "Software", spec: "Original EZCAD Software" },
+      { sr: "4", part: "Interface Type", spec: "USB, Ethernet" },
+      { sr: "5", part: "Cooling Method", spec: "Air Cooled System" },
+      { sr: "6", part: "Power Supply", spec: "220V / 50-60Hz" }
+    ],
+    parameters: [
+      { label: "1. Marking Area", value: "100×100 mm to 300x300 mm" },
+      { label: "2. Laser Wavelength", value: "1064 nm" },
+      { label: "3. Software", value: "EZCAD" },
+      { label: "4. Interface", value: "USB, Ethernet" },
+      { label: "5. Power Supply", value: "220V/50-60Hz" },
+      { label: "6. Output Power Optional", value: "20W / 30W / 50W" },
+      { label: "7. Scanning Speed", value: "Up to 7000 mm/s (Typically 3000-5000 mm/s)" },
+      { label: "8. Repetition Accuracy", value: "±0.001mm" },
+      { label: "9. Cooling Method", value: "Air cooled" },
+      { label: "10. Supported Materials", value: "Stainless steel, aluminum, copper, brass. Plastics: ABS, PVC, PC, etc." },
+      { label: "11. Machine Size (Compact)", value: "600 × 800 × 1400 mm" },
+      { label: "12. Machine Weight", value: "Around 50-100 kg" }
+    ],
+    spareParts: [
+      { title: "Motor", img: "/motor.png" },
+      { title: "Lens", img: "/lens.png" },
+      { title: "Aero", img: "/aero.png" },
+      { title: "Panel/Body", img: "/panel.png" },
+      { title: "Lens Plate", img: "/lens-plate.png" }
+    ]
+  },
 ];
