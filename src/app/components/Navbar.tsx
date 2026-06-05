@@ -60,7 +60,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/Makinatic logo cnc.png"      
+              src="/cnc-logo.png"      
               alt="Makinati Logo" 
               width={90}
               height={90}           
