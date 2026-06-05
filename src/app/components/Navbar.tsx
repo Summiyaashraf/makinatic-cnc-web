@@ -62,8 +62,8 @@ const Navbar = () => {
             <Image 
               src="/Makinatic logo cnc.png"      
               alt="Makinati Logo" 
-              width={90}
-              height={90}           
+              width={110}
+              height={110}           
               priority              
               className="object-contain w-auto h-12 md:h-16 mix-blend-multiply"
             />
